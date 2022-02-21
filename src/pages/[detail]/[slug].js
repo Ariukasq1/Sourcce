@@ -63,7 +63,6 @@ Indcap.getInitialProps = async (context) => {
   const data = await wp
     .posts()
     .categories((catId || {}).id)
-    .perPage(100)
     .embed();
 
   const post = await wp
@@ -81,7 +80,7 @@ Indcap.getInitialProps = async (context) => {
   const brands = await wp
     .posts()
     .categories((brandsID || {}).id)
-    .perPage(100)
+    .perPage(40)
     .embed();
 
   const relID = await wp
